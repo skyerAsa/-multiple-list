@@ -1,0 +1,80 @@
+.menu {
+    display: flex;
+}
+
+li {
+    text-align: center;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.menu li+li {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.menu>li:hover {
+    cursor: pointer;
+    background-color: pink;
+    display: block;
+    position: relative;
+}
+
+.minMwnu {
+    position: absolute;
+    display: none;
+    top: calc(100% -10px);
+    z-index: 2;
+    background-color: aqua;
+}
+
+.minMwnu ul li {
+    margin: 0;
+    width: 200px;
+}
+
+.minMwnu ul {
+    padding: 0;
+}
+
+.menu li:hover .minMwnu {
+    display: block;
+}
+
+.new {
+    position: absolute;
+    display: none;
+    top: calc(100% -50px);
+    left: 50px;
+    z-index: 3;
+    background-color: green;
+}
+
+.menu li .minMwnu:nth-child(2) li:hover .new {
+    display: block;
+}
+
+.minMwnu li:hover {
+    background-color: aquamarine;
+}
+
+.new li:hover {
+    background-color: white;
+}
+
+.now {
+    position: absolute;
+    display: none;
+    top: calc(100% -50px);
+    left: 200px;
+    z-index: 3;
+    background-color: green;
+}
+
+.menu li .minMwnu:nth-child(2) li:hover .now {
+    display: block;
+}
+
+.now li:hover {
+    background-color: white;
+}
